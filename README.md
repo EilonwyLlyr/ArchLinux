@@ -96,6 +96,7 @@ Arch linux has just been installed you can start up the computer and do anything
 
 
 For more information on the following 3 steps and which dirvers to install go to [Xorg](https://wiki.archlinux.org/title/Xorg)
+
 5. `pacman -S mesa` or `pacman -S nvidia` installs the driver depending on the GPU you are using. mesa for AMD/ATI or Intel nvidia for Nvidia GPU
 6. `vim /etc/pacman.conf` if you are going to use/download 32-bit programs such as Steam look for and uncomment the following:
 `[multilib]
@@ -109,7 +110,7 @@ Include=/etc/pacmad.d/mirrorlist`
 11. `reboot`
 
 
-### Wifi setup
+## Wifi setup
 1. `iwctl`
 2. `wsc list` you will get a list of devices `[device]`.
 3. `wsc [device] push-button` will turn on wifi device.
