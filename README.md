@@ -35,7 +35,7 @@ If you get a packaged returned you should be fine. If not you will need to eithe
 `[enter]` take up the remaning space of the disk
 `t` to change the tpe of the partiton
 `11` for a microsoft file system
-13. `p` take a note of the partitions that were created. Some examples of how they will look: /dev/sda1, /dev/sda2, /dev/sdb1, /dev/sdv2, /dev/nvme0n1p1 /dev/nvme0n1p2. The partions are numbered from 1 to n where n the number of partitons you created. [partiton#1] [partiton#2] [partiton#3](optional)
+13. `p` take a note of the partitions that were created. Some examples of how they will look: /dev/sda1, /dev/sda2, /dev/sdb1, /dev/sdv2, /dev/nvme0n1p1 /dev/nvme0n1p2. The partions are numbered from 1 to n where n the number of partitons you created. [partiton#1]  [partiton#2]  (optional)[partiton#3]
 14. `mkfs.fat -F32 [partiton#1]` This will make the first partion create, which was EFI type, use a fat32 file allocation table
 15. `mkfs.ext4 [partition#2]` 
 
