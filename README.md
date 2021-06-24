@@ -26,4 +26,4 @@ If you get a packaged returned you should be fine. If not you will need to eithe
 7. `station [device] show` verify if you are connect to the network.
 8. `exit`
 
-3.
+3. `timedatectl set-ntp true` configures you hardware clock
