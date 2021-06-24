@@ -14,7 +14,7 @@ Simplified steps to install Arch Linux on any computer.
 A list of files shoudl show. If you get something along the lines of directory does not exist then your boot was not uefi.
 2. Check if you have internet access by pining.
 `ping google.com -c 1`
-If you get a packaged returned you should be fine. If not you will need to either connect an ethernet cable or setup the wifi. [Wifi setup](###markdown-header-Wifi-setup)
+If you get a packaged returned you should be fine. If not you will need to either connect an ethernet cable or setup the wifi. [Wifi setup](#wifi-setup)
 3. `timedatectl set-ntp true` configures you hardware clock
 4. `fdisk -l | less` lists all of the current harddrives on your system. Some examples of how they will look: /dev/sda, /dev/sdb, /dev/nvme0n1. From these list of disks you will select one where you will install arch. `[disk]`
 5. `fdisk [disk]` will slect the disk you will format
