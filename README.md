@@ -19,8 +19,25 @@ If you get a packaged returned you should be fine. If not you will need to eithe
 4. `fdisk -l | less` lists all of the current harddrives on your system. Some examples of how they will look: /dev/sda, /dev/sdb, /dev/nvme0n1. From these list of disks you will select one where you will install arch. `[disk]`
 5. `fdisk [disk]` will slect the disk you will format
 6. `g` creates an empty GPT partition
-7. `n` creates a new partition, you will then be tasked to setup the partiton, you can press enter __twice__. Then it will ask
-
+7. `n` create a new partition
+`[enter]` size of the sectors, just press enter for default
+`[enter]` starting sector, just press enter for default
+`+100M` the size of the partition, this will the our efi partion so we can boot the system
+`t` to change the type of the partition
+`1` change the type to EFI type system
+8. `n` create a new partition
+`[enter]` size of sectors, just press enter for default
+`[enter]` starting sector, just press enter for default
+`[enter]` or `+##G` the size of the partion where we will install arch, you can either take the rest of the disk space with [enter] or specify an amount if you are going to dual boot with another system.
+12. (optional windows dual boot)`n` create a new partion for dual boot
+`[enter]` size of sectors, just press enter for default
+`[enter]` starting sector, just press enter for default
+`[enter]` take up the remaning space of the disk
+`t` to change the tpe of the partiton
+`11` for a microsoft file system
+13. `p` take a note of the partitions that were created. Some examples of how they will look: /dev/sda1, /dev/sda2, /dev/sdb1, /dev/sdv2, /dev/nvme0n1p1 /dev/nvme0n1p2. The partions are numbered from 1 to n where n the number of partitons you created. [partiton#1] [partiton#2] [partiton#3](optional)
+14. `mkfs.fat -F32 [partiton#1]` This will make the first partion create, which was EFI type, use a fat32 file allocation table
+15. `mkfs.ext4 [partition#2]` 
 
 
 
