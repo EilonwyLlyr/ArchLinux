@@ -15,6 +15,7 @@ A list of files shoudl show. If you get something along the lines of directory d
 2. Check if you have internet access by pining.
 `ping google.com -c 1`
 If you get a packaged returned you should be fine. If not you will need to either connect an ethernet cable or setup the wifi.
+3. `timedatectl set-ntp true` configures you hardware clock
 
 ### Wifi setup
 1. `iwctl`
@@ -25,5 +26,3 @@ If you get a packaged returned you should be fine. If not you will need to eithe
 6. `station [device] connect [network]` this will try to connect to the network, if it is password protected you will need to input that password next.
 7. `station [device] show` verify if you are connect to the network.
 8. `exit`
-
-3. `timedatectl set-ntp true` configures you hardware clock
