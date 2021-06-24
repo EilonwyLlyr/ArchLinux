@@ -14,7 +14,7 @@ Simplified steps to install Arch Linux on any computer. anything in the followin
 A list of files shoudl show. If you get something along the lines of directory does not exist then your boot was not uefi.
 2. Check if you have internet access by pining.
 `ping google.com -c 1`
-If you get a packaged returned you should be fine. If not you will need to either connect an ethernet cable or setup the wifi. [link](### Wifi setup)
+If you get a packaged returned you should be fine. If not you will need to either connect an ethernet cable or setup the wifi. [Wifi setup]
 3. `timedatectl set-ntp true` configures you hardware clock
 
 ### Wifi setup
