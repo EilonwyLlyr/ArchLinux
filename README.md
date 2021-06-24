@@ -54,9 +54,13 @@ If you get a packaged returned you should be fine. If not you will need to eithe
 26. `locale-gen` generates the locales you uncommented
 27. `vim /etc/hostname` this will be an empty file, this will be the name of the computer, you can name it anything, perferably all lowercase no spaces [hostname]
 28. `vim /etc/hosts` this will setup the local network. At the bottom of the commented text enter:
+
 `127.0.0.1  localhost`
+
 `::1         localhost`
+
 `127.0.1.1   [hostname].localdomain  [hostname]`
+
 29. `passwd` this will setup the root password
 30. `useradd -m [username]` creates a new user must be all lowercase no spaces [username]
 31. `passwd [username]` this will setup the password of the new user
@@ -99,8 +103,11 @@ For more information on the following 3 steps and which dirvers to install go to
 
 5. `pacman -S mesa` or `pacman -S nvidia` installs the driver depending on the GPU you are using. mesa for AMD/ATI or Intel nvidia for Nvidia GPU
 6. `vim /etc/pacman.conf` if you are going to use/download 32-bit programs such as Steam look for and uncomment the following:
+
 `[multilib]`
+
 `Include=/etc/pacmad.d/mirrorlist`
+
 7. `pacman -S lib32-mesa` or `pacman -S lib32-nvidia-utils` for the 32-bit packages for the GPU
 
 
